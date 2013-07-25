@@ -14,13 +14,15 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     ComboBox *comboBox = [[ComboBox alloc]initWithFrame:CGRectMake(50, 50, 220, 36)];
     comboBox.delegate = self;
     [comboBox setComboBoxSize:CGSizeMake(220, 44*4)];
-  //  [comboBox.view setFrame:CGRectMake(50, 50, 220, 36)];
     [self.view addSubview:comboBox];
     
     _dataObjects = [NSArray arrayWithObjects:@"House",@"Apple",@"Book",@"Drink", nil];
