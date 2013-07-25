@@ -7,6 +7,12 @@ Requirements
 - iOS 5.0 or higher
 - ARC
 
+Contact
+--------------
+- [Twitter](twitter.com/rocxteady2)
+- [Facebook](https://www.facebook.com/rocxteady)
+- [E-Mail](ulas.sancak@hotmail.com.tr)
+
 Demo
 --------------
 
