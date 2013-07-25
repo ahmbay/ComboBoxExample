@@ -10,7 +10,7 @@ Requirements
 Demo
 --------------
 
-Build and run the 'ComboBoxExample' project in Xcode to see 'ComboBox' in action.
+Build and run the *ComboBoxExample* project in Xcode.
 
 in ViewController.h
 --------------
@@ -43,3 +43,7 @@ in ViewController.m
     -(void)comboBox:(ComboBox *)comboBox didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         NSLog(@"%@", [_dataObjects objectAtIndex:indexPath.row]);
     }
+
+License
+--------------
+You can do with this project whatever you want. :)
