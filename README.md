@@ -1,6 +1,9 @@
 ComboBox For iOS
 ==============
 
+in ViewController.h
+--------------
+
     #import <UIKit/UIKit.h>
     #import "ComboBox.h"
 
@@ -8,3 +11,25 @@ ComboBox For iOS
 
     @property (nonatomic, strong) NSArray *dataObjects;
     @end
+    
+in ViewController.m
+--------------
+    
+    - (void)viewDidLoad
+{
+    [super viewDidLoad];
+    ComboBox *comboBox = [[ComboBox alloc]initWithFrame:CGRectMake(50, 50, 220, 36)];
+    comboBox.delegate = self;
+    [comboBox setComboBoxSize:CGSizeMake(220, 44*4)];
+  //  [comboBox.view setFrame:CGRectMake(50, 50, 220, 36)];
+    [self.view addSubview:comboBox];
+    
+    _dataObjects = [NSArray arrayWithObjects:@"House",@"Apple",@"Book",@"Drink", nil];
+    
+    [comboBox setComboBoxDataArray:_dataObjects];
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)comboBox:(ComboBox *)comboBox didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%@", [_dataObjects objectAtIndex:indexPath.row]);
+}
