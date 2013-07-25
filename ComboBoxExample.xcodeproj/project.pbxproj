@@ -350,6 +350,7 @@
 				6A1B77B417A132CE0066C30E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
