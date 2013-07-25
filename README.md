@@ -7,6 +7,11 @@ Requirements
 - iOS 5.0 or higher
 - ARC
 
+Demo
+--------------
+
+Build and run the 'ComboBoxExample' project in Xcode to see 'ComboBox' in action.
+
 in ViewController.h
 --------------
 
