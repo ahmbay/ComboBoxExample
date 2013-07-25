@@ -1,4 +1,4 @@
-ComboBox For iOS
+ComboBox For iOS 0.1
 ==============
 
 in ViewController.h
