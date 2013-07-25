@@ -37,14 +37,15 @@
     [UIView animateWithDuration:0.25
                      animations:^(void){
                          [_comboBoxTableView setFrame:CGRectMake(self.view.frame.origin.x, _button.frame.origin.y+_button.frame.size.height, defaultComboBoxTableSize.width, defaultComboBoxTableSize.height)];
-                     }
-                     completion:^(BOOL finished){
                          CGRect frame = self.frame;
                          frame.size.height = _button.frame.size.height+_comboBoxTableView.frame.size.height;
                          self.frame = frame;
                          frame = self.view.frame;
                          frame.size.height = _button.frame.size.height+_comboBoxTableView.frame.size.height;
                          self.view.frame = frame;
+                     }
+                     completion:^(BOOL finished){
+                         
                      }];
 }
 
@@ -52,14 +53,15 @@
     [UIView animateWithDuration:0.25
                      animations:^(void){
                          [_comboBoxTableView setFrame:CGRectMake(self.view.frame.origin.x, _button.frame.origin.y+_button.frame.size.height, defaultComboBoxTableSize.width, 0)];
-                     }
-                     completion:^(BOOL finished){
                          CGRect frame = self.frame;
                          frame.size.height = _button.frame.size.height+_comboBoxTableView.frame.size.height;
                          self.frame = frame;
                          frame = self.view.frame;
                          frame.size.height = _button.frame.size.height+_comboBoxTableView.frame.size.height;
                          self.view.frame = frame;
+                     }
+                     completion:^(BOOL finished){
+                         
                      }];
 }
 
