@@ -1,10 +1,10 @@
 ComboBox For iOS
 ==============
 
-`#import <UIKit/UIKit.h>
-#import "ComboBox.h"
+    #import <UIKit/UIKit.h>
+    #import "ComboBox.h"
 
-@interface ViewController : UIViewController <ComBoxDelegate>
+    @interface ViewController : UIViewController <ComBoxDelegate>
 
-@property (nonatomic, strong) NSArray *dataObjects;
-@end`
+    @property (nonatomic, strong) NSArray *dataObjects;
+    @end
