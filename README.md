@@ -3,9 +3,9 @@ ComboBox For iOS 0.1
 
 Requirements
 --------------
--Xcode 4.5 or higher
--iOS 5.0 or higher
--ARC
+- Xcode 4.5 or higher
+- iOS 5.0 or higher
+- ARC
 
 in ViewController.h
 --------------
