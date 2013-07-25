@@ -19,7 +19,7 @@ Demo
 Screens
 
 ![Before Touch](http://s12.postimg.org/prca8muul/i_OS_Simulator_Screen_shot_Jul_26_2013_1_56_24_A.png)
-![After Touch](http://s5.postimg.org/9aprmgm7r/i_OS_Simulator_Screen_shot_Jul_26_2013_1_56_26_A.png)
+![After Touch](http://s5.postimg.org/kqw6ki0dz/i_OS_Simulator_Screen_shot_Jul_26_2013_2_01_33_A.png)
 
 Build and run the *ComboBoxExample* project in Xcode.
 
