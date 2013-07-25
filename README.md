@@ -9,9 +9,9 @@ Requirements
 
 Contact
 --------------
-- [Twitter](twitter.com/rocxteady2)
+- [Twitter](https://twitter.com/rocxteady2)
 - [Facebook](https://www.facebook.com/rocxteady)
-- [E-Mail](ulas.sancak@hotmail.com.tr)
+- [E-Mail](mailto:ulas.sancak@hotmail.com.tr)
 
 Demo
 --------------
