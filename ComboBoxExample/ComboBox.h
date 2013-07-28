@@ -24,6 +24,7 @@
 CGSize defaultComboBoxTableSize;
 CGRect comboBoxTableViewFrame;
 }
+@property (strong, nonatomic) IBOutlet UIImageView *arrow;
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) UITableView *comboBoxTableView;
@@ -35,4 +36,7 @@ CGRect comboBoxTableViewFrame;
 
 -(void)setComboBoxSize:(CGSize)size;
 - (IBAction)openComboBox:(UIButton *)sender;
+
+-(void)setComboBoxTitle:(NSString *)title;
+
 @end

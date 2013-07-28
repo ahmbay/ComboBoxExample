@@ -20,6 +20,8 @@
         [[NSBundle mainBundle] loadNibNamed:@"ComboBox" owner:self options:nil];
         [self addSubview:self.view];
         [self.view setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        [_button setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        [_arrow setFrame:CGRectMake(frame.size.width-frame.size.height, 0, frame.size.height, frame.size.height)];
         defaultComboBoxTableSize = CGSizeMake(self.view.frame.size.width, 100);
         _comboBoxTableView = [[UITableView alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, _button.frame.origin.y+_button.frame.size.height, self.view.frame.size.width, 0)];
         _comboBoxTableView.layer.borderWidth = 1.0;
@@ -36,7 +38,7 @@
 -(void)openComboBoxWithAnimation:(UITableView *)comboBoxTableView{
     [UIView animateWithDuration:0.25
                      animations:^(void){
-                         [_comboBoxTableView setFrame:CGRectMake(self.view.frame.origin.x, _button.frame.origin.y+_button.frame.size.height, defaultComboBoxTableSize.width, defaultComboBoxTableSize.height)];
+                         [_comboBoxTableView setFrame:CGRectMake(self.view.frame.origin.x, _button.frame.origin.y+_button.frame.size.height, self.frame.size.width, defaultComboBoxTableSize.height)];
                          CGRect frame = self.frame;
                          frame.size.height = _button.frame.size.height+_comboBoxTableView.frame.size.height;
                          self.frame = frame;
@@ -52,7 +54,7 @@
 -(void)closeComboBoxWithAnimation:(UITableView *)comboBoxTableView{
     [UIView animateWithDuration:0.25
                      animations:^(void){
-                         [_comboBoxTableView setFrame:CGRectMake(self.view.frame.origin.x, _button.frame.origin.y+_button.frame.size.height, defaultComboBoxTableSize.width, 0)];
+                         [_comboBoxTableView setFrame:CGRectMake(self.view.frame.origin.x, _button.frame.origin.y+_button.frame.size.height, self.frame.size.width, 0)];
                          CGRect frame = self.frame;
                          frame.size.height = _button.frame.size.height+_comboBoxTableView.frame.size.height;
                          self.frame = frame;
@@ -68,6 +70,7 @@
 -(void)setComboBoxSize:(CGSize)size{
     defaultComboBoxTableSize = size;
 }
+
 
 -(void)setComboBoxData:(NSArray *)comboBoxData{
     _comboBoxDataArray = [NSArray arrayWithArray:comboBoxData];
@@ -90,6 +93,10 @@
         // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
         cell = [topLevelObjects objectAtIndex:0];
     }
+    
+    CGRect frame = cell.frame;
+    frame.size.width = self.frame.size.width;
+    cell.frame = frame;
     
     cell.titleLabel.text = [_comboBoxDataArray objectAtIndex:indexPath.row];
     
@@ -122,4 +129,9 @@
     }
     
 }
+
+-(void)setComboBoxTitle:(NSString *)title{
+    [_button setTitle:title forState:UIControlStateNormal];
+}
+
 @end
